@@ -1,0 +1,58 @@
+  //条件分岐　スタート　メイン
+  //1が白色の場合
+  if (color_h_1 >= 20) {
+    void color_1_warikomi();
+    //２が白色の場合
+  } else if (color_h_2 >= 400) {
+    void color_2_warikomi();
+    //３が白色の場合
+  } else if (color_h_3 >= 15) {
+    void color_3_warikomi();
+    //４が白色の場合
+  } else if (color_h_4 >= 100) {
+    void color_4_warikomi();
+    //前
+  } else if (997 <= ir_h_1 ) {
+    void ir_10_houkou_warikomi();
+    //左斜め前
+  } else if ((ir_h_1_and_ir_h_2) >= 1800) {
+    void ir_15_houkou_warikomi();
+    //左
+  } else if (998 <= ir_h_2) {
+    void ir_20_houkou_warikomi();
+    //左斜め後ろ
+  } else if ((ir_h_2_and_ir_h_3) >= 2000) {
+    void ir_25_houkou_warikomi();
+    //後ろ
+  } else if (990 <= ir_h_3) {
+    void ir_30_houkou_warikomi();
+    //右斜め後ろ
+  } else if ((ir_h_3_and_ir_h_4) >= 2000) {
+    void ir_35_houkou_warikomi();
+    //右
+  } else if (998 <= ir_h_4) {
+    void ir_40_houkou_warikomi();
+    //右斜め前
+  } else if ((ir_h_4_and_ir_h_1) >=  1800) {
+    void ir_45_houkou_warikomi();
+    //右を向いている時
+  } else if (DIR <= 45) { //constrain(DIR, 45, 180)
+    void compusu_1_warikomi();
+    //左を向いている時
+  } else if (DIR <= 450) {//constrain(DIR, 181, 315)
+    void compusu_2_warikomi();
+    //５CM以内にものがある時
+  } else if ((cm) <= 5) {
+    void ultrasonic_1_warikomi();
+  } else {
+    Serial.println("それ以外");
+    //Serial1.println("2F1004F100");
+    //    delayMicroseconds(100);
+    //Serial1.println("1F1003F100");
+    //    delayMicroseconds(100);
+    //Serial1.println("1R1003R100");
+    //    delayMicroseconds(100);
+    //Serial1.println("2R1004R100");
+    //    delayMicroseconds(100);
+    Serial1.println("");
+  }
